@@ -40,7 +40,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -50,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 12, 2026 12:07:39 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 15, 2026 08:02:30 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -66,7 +65,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -78,12 +76,11 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@resetCart</a></li>
-					<li><a href='#'>@resetBoton</a></li>
-					<li><a href='#'>@run</a></li>
 					<li><a href='#'>@checkoutVacio</a></li>
-					<li><a href='#'>@logoutBack</a></li>
+					<li><a href='#'>@resetCart</a></li>
 					<li><a href='#'>@checkoutDatos</a></li>
+					<li><a href='#'>@resetBoton</a></li>
+					<li><a href='#'>@logoutBack</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -125,12 +122,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$75%'>
-                    <span class='strong'>3</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>5</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
-                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -143,12 +140,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='95%'>
-                    <span class='strong'>20</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>5</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='4%'>
-                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -163,12 +160,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='99%'>
-                    <span class='strong'>170</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>62</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    1</span> steps failed, 
+                    0</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -193,8 +190,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>SauceDemo Bugs Automation</span>
-						<span class='test-time'>Sep 12, 2026 12:07:40 AM</span>
+						<span class='test-name'>Checkout con datos aleatorios sin limite y sin validacion postal</span>
+						<span class='test-time'>Sep 15, 2026 08:02:30 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -205,9 +202,96 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 04.928</span>
+	<span class='duration right label'>00 00 06.722</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Checkout con datos aleatorios sin limite y sin validacion postal</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>postal</td><td>postalCheck</td></tr><tr><td>AAAAAAAAAAAAAA</td><td>BBBBBBBB</td><td>XYZ-!@#_ABC_999999999999</td><td>XYZ</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='3' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Checkout con datos aleatorios sin limite y sin validacion postal</div>
+
+				<div class='category-list'>
+						<span class='category label'>@checkoutDatos</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='5' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
+
+				</li>
+				<li test-id='6' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
+
+				</li>
+				<li test-id='7' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
+
+				</li>
+				<li test-id='8' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</h6>
+
+				</li>
+				<li test-id='9' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</h6>
+
+				</li>
+				<li test-id='10' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.BugsSteps.addProductViaHome(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add product "Sauce Labs Backpack" to cart via home</h6>
+
+				</li>
+				<li test-id='11' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.HomeSteps.clickOnCartIcon()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the cart icon</h6>
+
+				</li>
+				<li test-id='12' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.YourCartSteps.clickOnCheckoutButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the checkout button</h6>
+
+				</li>
+				<li test-id='13' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.BugsSteps.fillCheckoutForm(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill checkout form with firstName "AAAAAAAAAAAAAA", lastName "BBBBBBBB" and postal "XYZ-!@#_ABC_999999999999"</h6>
+
+				</li>
+				<li test-id='14' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.BugsSteps.formShouldKeepValues(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then form should keep values without truncation and postal contains "XYZ"</h6>
+
+				</li>
+				<li test-id='15' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.BugsSteps.clickContinueInCheckout()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on continue button in checkout</h6>
+
+				</li>
+				<li test-id='16' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.BugsSteps.onCheckoutOverview()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should be on checkout overview and no error is shown</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Checkout sin productos en carrito</span>
+						<span class='test-time'>Sep 15, 2026 08:02:37 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='19' status='pass'>
+
+	<span class='duration right label'>00 00 04.245</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Checkout sin productos en carrito</div>
 	</div>
@@ -218,245 +302,82 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='4' class='node given Pass' status='Pass'>
+		<li test-id='21' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
 
 
 		</li>
-		<li test-id='5' class='node when Pass' status='Pass'>
+		<li test-id='22' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</div>
 
 
 		</li>
-		<li test-id='6' class='node and Pass' status='Pass'>
+		<li test-id='23' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
 
 
 		</li>
-		<li test-id='7' class='node and Pass' status='Pass'>
+		<li test-id='24' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</div>
 
 
 		</li>
-		<li test-id='8' class='node then Pass' status='Pass'>
+		<li test-id='25' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</div>
 
 
 		</li>
-		<li test-id='9' class='node when Pass' status='Pass'>
+		<li test-id='26' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnCartIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the cart icon</div>
 
 
 		</li>
-		<li test-id='10' class='node then Pass' status='Pass'>
+		<li test-id='27' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.cartShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart should be empty</div>
 
 
 		</li>
-		<li test-id='11' class='node and Pass' status='Pass'>
+		<li test-id='28' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And cart badge should be empty</div>
 
 
 		</li>
-		<li test-id='12' class='node when Pass' status='Pass'>
+		<li test-id='29' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.YourCartSteps.clickOnCheckoutButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the checkout button</div>
 
 
 		</li>
-		<li test-id='13' class='node then Pass' status='Pass'>
+		<li test-id='30' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.userShouldBeOnCheckoutStepOne())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should be on checkout step one page</div>
 
 
 		</li>
-		<li test-id='14' class='node and Pass' status='Pass'>
+		<li test-id='31' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.checkoutFormFieldsShouldBeVisible())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And checkout form fields should be visible</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='16' status='pass'>
-
-	<span class='duration right label'>00 00 09.231</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validar reset App State sin refresh en carrito</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@resetCart</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='18' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
-
-
-		</li>
-		<li test-id='19' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</div>
-
-
-		</li>
-		<li test-id='20' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
-
-
-		</li>
-		<li test-id='21' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</div>
-
-
-		</li>
-		<li test-id='22' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</div>
-
-
-		</li>
-		<li test-id='23' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.addFollowingProducts(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add following products to cart</div>
-
-
-					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
-		</li>
-		<li test-id='24' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBe(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be "2"</div>
-
-
-		</li>
-		<li test-id='25' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnCartIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the cart icon</div>
-
-
-		</li>
-		<li test-id='26' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.yourCartShouldHaveItems(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then YourCart should have 2 items</div>
-
-
-		</li>
-		<li test-id='27' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.doResetFromCart())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I do reset app state from cart</div>
-
-
-		</li>
-		<li test-id='28' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be empty</div>
-
-
-		</li>
-		<li test-id='29' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartShouldStillHaveItemsWithoutRefresh(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And cart should still have 2 items without refresh</div>
-
-
-		</li>
-		<li test-id='30' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.refreshPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I refresh page</div>
-
-
-		</li>
-		<li test-id='31' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart should be empty</div>
-
-
-		</li>
-	</ul>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Validar logout y 3 backs con Epic sadface</span>
+						<span class='test-time'>Sep 15, 2026 08:02:41 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='33' status='pass'>
 
-	<span class='duration right label'>00 00 12.916</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validar estado botones tras reset App State</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@resetBoton</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='35' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
+<div class='scenario node' test-id='34' status='pass'>
 
-
-		</li>
-		<li test-id='36' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</div>
-
-
-		</li>
-		<li test-id='37' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
-
-
-		</li>
-		<li test-id='38' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</div>
-
-
-		</li>
-		<li test-id='39' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</div>
-
-
-		</li>
-		<li test-id='40' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.addFollowingProducts(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add following products to cart</div>
-
-
-					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
-		</li>
-		<li test-id='41' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.inventoryShouldHaveItems(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then inventory should have 6 items</div>
-
-
-		</li>
-		<li test-id='42' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.buttonsShouldShowForProducts(java.lang.String,io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And buttons should show "Remove" for products</div>
-
-
-					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
-		</li>
-		<li test-id='43' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.removeProductViaHome(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I remove product "Sauce Labs Bike Light" from cart via home</div>
-
-
-		</li>
-		<li test-id='44' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBe(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be "1"</div>
-
-
-		</li>
-		<li test-id='45' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.addProductViaHome(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add product "Sauce Labs Bike Light" to cart via home</div>
-
-
-		</li>
-		<li test-id='46' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBe(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be "2"</div>
-
-
-		</li>
-		<li test-id='47' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.doResetFromHome())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I do reset app state from home</div>
-
-
-		</li>
-		<li test-id='48' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be empty</div>
-
-
-		</li>
-		<li test-id='49' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.BugsSteps.buttonsShouldShowForProducts(java.lang.String,io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And buttons should show "Add to cart" for products</div>
-
-
-					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='51' status='pass'>
-
-	<span class='duration right label'>00 00 10.589</span>
+	<span class='duration right label'>00 00 10.373</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validar logout y 3 backs con Epic sadface</div>
 	</div>
@@ -467,52 +388,52 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='53' class='node given Pass' status='Pass'>
+		<li test-id='36' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
 
 
 		</li>
-		<li test-id='54' class='node when Pass' status='Pass'>
+		<li test-id='37' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</div>
 
 
 		</li>
-		<li test-id='55' class='node and Pass' status='Pass'>
+		<li test-id='38' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
 
 
 		</li>
-		<li test-id='56' class='node and Pass' status='Pass'>
+		<li test-id='39' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</div>
 
 
 		</li>
-		<li test-id='57' class='node then Pass' status='Pass'>
+		<li test-id='40' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</div>
 
 
 		</li>
-		<li test-id='58' class='node when Pass' status='Pass'>
+		<li test-id='41' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.addProductViaHome(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add product "Sauce Labs Backpack" to cart via home</div>
 
 
 		</li>
-		<li test-id='59' class='node and Pass' status='Pass'>
+		<li test-id='42' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnCartIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the cart icon</div>
 
 
 		</li>
-		<li test-id='60' class='node and Pass' status='Pass'>
+		<li test-id='43' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.YourCartSteps.clickOnCheckoutButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the checkout button</div>
 
 
 		</li>
-		<li test-id='61' class='node and Pass' status='Pass'>
+		<li test-id='44' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.openMenuAndLogout())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open menu and logout</div>
 
 
 		</li>
-		<li test-id='62' class='node then Pass' status='Pass'>
+		<li test-id='45' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.BugsSteps.seeErrorsAfter3Backs(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see errors after 3 backs</div>
 
 
@@ -520,84 +441,13 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='64' status='pass'>
-
-	<span class='duration right label'>00 00 06.355</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Checkout con datos aleatorios sin limite y sin validacion postal</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>postal</td><td>postalCheck</td></tr><tr><td>AAAAAAAAAAAAAA</td><td>BBBBBBBB</td><td>XYZ-!@#_ABC_999999999999</td><td>XYZ</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='65' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Checkout con datos aleatorios sin limite y sin validacion postal</div>
-
-				<div class='category-list'>
-						<span class='category label'>@checkoutDatos</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='67' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='68' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='69' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='70' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</h6>
-
-				</li>
-				<li test-id='71' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='72' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BugsSteps.addProductViaHome(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add product "Sauce Labs Backpack" to cart via home</h6>
-
-				</li>
-				<li test-id='73' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.clickOnCartIcon()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the cart icon</h6>
-
-				</li>
-				<li test-id='74' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.YourCartSteps.clickOnCheckoutButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the checkout button</h6>
-
-				</li>
-				<li test-id='75' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BugsSteps.fillCheckoutForm(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill checkout form with firstName "AAAAAAAAAAAAAA", lastName "BBBBBBBB" and postal "XYZ-!@#_ABC_999999999999"</h6>
-
-				</li>
-				<li test-id='76' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BugsSteps.formShouldKeepValues(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then form should keep values without truncation and postal contains "XYZ"</h6>
-
-				</li>
-				<li test-id='77' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BugsSteps.clickContinueInCheckout()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on continue button in checkout</h6>
-
-				</li>
-				<li test-id='78' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.BugsSteps.onCheckoutOverview()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should be on checkout overview and no error is shown</h6>
-
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='80'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='47'>
 					<div class='test-heading'>
-						<span class='test-name'>Checkout a product</span>
-						<span class='test-time'>Sep 12, 2026 12:08:24 AM</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-name'>Validar estado botones tras reset App State</span>
+						<span class='test-time'>Sep 15, 2026 08:02:52 PM</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -607,715 +457,198 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='81' status='fail'>
+<div class='scenario node' test-id='48' status='pass'>
 
-	<span class='duration right label'>00 00 17.457</span>
+	<span class='duration right label'>00 00 12.476</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: User can checkout a purchase</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validar estado botones tras reset App State</div>
 	</div>
 	
 	
+		<div class='category-list'>
+				<span class='category label'>@resetBoton</span>
+		</div>
 	
 	<ul class='steps'>
-		<li test-id='83' class='node given Pass' status='Pass'>
+		<li test-id='50' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
 
 
 		</li>
-		<li test-id='84' class='node when Pass' status='Pass'>
+		<li test-id='51' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</div>
 
 
 		</li>
-		<li test-id='85' class='node and Pass' status='Pass'>
+		<li test-id='52' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
 
 
 		</li>
-		<li test-id='86' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</div>
+		<li test-id='53' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</div>
 
 
 		</li>
-		<li test-id='87' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given The home pages should be displayed</div>
-
-
-		</li>
-		<li test-id='88' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.addProductToCart(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add the product "Sauce Labs Backpack" to the cart</div>
-
-
-		</li>
-		<li test-id='89' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays "1"</div>
-
-
-		</li>
-		<li test-id='90' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnCartIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the cart icon</div>
-
-
-		</li>
-		<li test-id='91' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.YourCartSteps.clickOnCheckoutButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the checkout button</div>
-
-
-		</li>
-		<li test-id='92' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.CheckoutYourInformationSteps.fillCheckoutInformationForm(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill the checkout information with</div>
-
-
-					<div class="node-step"><table class='markup-table table '><tr><td>Jorge</td><td>Perez</td><td>12345</td></tr></table></div>
-		</li>
-		<li test-id='93' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.CheckoutYourInformationSteps.clickOnContinueButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the continue button</div>
-
-
-		</li>
-		<li test-id='94' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.CheckoutOverviewSteps.clickOnFinishButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on finish button</div>
-
-
-		</li>
-		<li test-id='95' class='node then Fail' status='Fail'>
-			<div class="step-name" title="(stepDefinitions.CheckoutCompleteSteps.verifyCheckoutCompleteMessage(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then A message that says "Thank you for your order!" should be displayed</div>
-
-
-					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".complete\-header"}
-  (Session info: chrome=153.0.8010.37)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.47.0', revision: '9175ed9 9175ed94d83e87cc3abeb7c9fd91367d17849d35'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d019dcf2e209ffd7983b5f81e1b8a476, findElement {using=class name, value=complete-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.37, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\carlo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55628}, goog:processID: 42984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55628/devtoo..., se:cdpVersion: 153.0.8010.37, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d019dcf2e209ffd7983b5f81e1b8a476
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
-	at pages.CheckoutCompletePage.getCheckoutCompleteMessage(CheckoutCompletePage.java:20)
-	at stepDefinitions.CheckoutCompleteSteps.verifyCheckoutCompleteMessage(CheckoutCompleteSteps.java:48)
-	at ✽.A message that says "Thank you for your order!" should be displayed(file:///D:/Universidad/8vo_Semestre/Certificacion%202/Segundo%20Parcial/Parcial/Selenium/saucedemo-finver/src/test/resources/checkout.feature:18)
-</textarea>
-		</li>
-		<li test-id='96' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepDefinitions.Hooks.afterScenario(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">User can checkout a purchase</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'>
-					</div>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='97'>
-					<div class='test-heading'>
-						<span class='test-name'>Home Page tests</span>
-						<span class='test-time'>Sep 12, 2026 12:08:41 AM</span>
-						<span class='test-status right pass'>Pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-
-<div class='scenario outline node' test-id='98' status='pass'>
-
-	<span class='duration right label'>00 00 06.040</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify that all the products are displayed in the home page</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>product</td></tr><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr><tr><td>Sauce Labs Bolt T-Shirt</td></tr><tr><td>Sauce Labs Fleece Jacket</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='99' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that all the products are displayed in the home page</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='101' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='102' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='103' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='104' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='105' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='106' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyProductIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The product "Sauce Labs Backpack" should be displayed</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='108' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that all the products are displayed in the home page</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='110' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='111' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='112' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='113' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='114' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='115' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyProductIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The product "Sauce Labs Bike Light" should be displayed</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='117' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that all the products are displayed in the home page</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='119' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='120' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='121' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='122' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='123' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='124' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyProductIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The product "Sauce Labs Bolt T-Shirt" should be displayed</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='126' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that all the products are displayed in the home page</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='128' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='129' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='130' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='131' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='132' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='133' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyProductIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The product "Sauce Labs Fleece Jacket" should be displayed</h6>
-
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='135' status='pass'>
-
-	<span class='duration right label'>00 00 06.350</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify that products can be added/removed to the cart</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>product</td></tr><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr><tr><td>Sauce Labs Bolt T-Shirt</td></tr><tr><td>Sauce Labs Fleece Jacket</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='136' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that products can be added/removed to the cart</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='138' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='139' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='140' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='141' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='142' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='143' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.addProductToCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I add the product "Sauce Labs Backpack" to the cart</h6>
-
-				</li>
-				<li test-id='144' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays "1"</h6>
-
-				</li>
-				<li test-id='145' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.removeProductFromCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I remove the product "Sauce Labs Backpack" from the cart</h6>
-
-				</li>
-				<li test-id='146' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays ""</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='148' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that products can be added/removed to the cart</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='150' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='151' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='152' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='153' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='154' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='155' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.addProductToCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I add the product "Sauce Labs Bike Light" to the cart</h6>
-
-				</li>
-				<li test-id='156' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays "1"</h6>
-
-				</li>
-				<li test-id='157' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.removeProductFromCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I remove the product "Sauce Labs Bike Light" from the cart</h6>
-
-				</li>
-				<li test-id='158' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays ""</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='160' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that products can be added/removed to the cart</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='162' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='163' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='164' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='165' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='166' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='167' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.addProductToCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I add the product "Sauce Labs Bolt T-Shirt" to the cart</h6>
-
-				</li>
-				<li test-id='168' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays "1"</h6>
-
-				</li>
-				<li test-id='169' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.removeProductFromCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I remove the product "Sauce Labs Bolt T-Shirt" from the cart</h6>
-
-				</li>
-				<li test-id='170' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays ""</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='172' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that products can be added/removed to the cart</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='174' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='175' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='176' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='177' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on the login button</h6>
-
-				</li>
-				<li test-id='178' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When The home pages should be displayed</h6>
-
-				</li>
-				<li test-id='179' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.addProductToCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I add the product "Sauce Labs Fleece Jacket" to the cart</h6>
-
-				</li>
-				<li test-id='180' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays "1"</h6>
-
-				</li>
-				<li test-id='181' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.removeProductFromCart(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I remove the product "Sauce Labs Fleece Jacket" from the cart</h6>
-
-				</li>
-				<li test-id='182' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyCartIconAmount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that the cart icon displays ""</h6>
-
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='184'>
-					<div class='test-heading'>
-						<span class='test-name'>Login Sauce Demo App</span>
-						<span class='test-time'>Sep 12, 2026 12:08:54 AM</span>
-						<span class='test-status right pass'>Pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-
-<div class='scenario node' test-id='185' status='pass'>
-
-	<span class='duration right label'>00 00 01.469</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login into Sauce Demo with valid credentials</div>
-	</div>
-	
-	
-	
-	<ul class='steps'>
-		<li test-id='187' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
-
-
-		</li>
-		<li test-id='188' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "standard_user"</div>
-
-
-		</li>
-		<li test-id='189' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
-
-
-		</li>
-		<li test-id='190' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</div>
-
-
-		</li>
-		<li test-id='191' class='node then Pass' status='Pass'>
+		<li test-id='54' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</div>
 
 
 		</li>
+		<li test-id='55' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.addFollowingProducts(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add following products to cart</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
+		</li>
+		<li test-id='56' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.inventoryShouldHaveItems(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then inventory should have 6 items</div>
+
+
+		</li>
+		<li test-id='57' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.buttonsShouldShowForProducts(java.lang.String,io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And buttons should show "Remove" for products</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
+		</li>
+		<li test-id='58' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.removeProductViaHome(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I remove product "Sauce Labs Bike Light" from cart via home</div>
+
+
+		</li>
+		<li test-id='59' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBe(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be "1"</div>
+
+
+		</li>
+		<li test-id='60' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.addProductViaHome(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add product "Sauce Labs Bike Light" to cart via home</div>
+
+
+		</li>
+		<li test-id='61' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBe(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be "2"</div>
+
+
+		</li>
+		<li test-id='62' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.doResetFromHome())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I do reset app state from home</div>
+
+
+		</li>
+		<li test-id='63' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be empty</div>
+
+
+		</li>
+		<li test-id='64' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.buttonsShouldShowForProducts(java.lang.String,io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And buttons should show "Add to cart" for products</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
+		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='193' status='pass'>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='66'>
+					<div class='test-heading'>
+						<span class='test-name'>Validar reset App State sin refresh en carrito</span>
+						<span class='test-time'>Sep 15, 2026 08:03:04 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
 
-	<span class='duration right label'>00 00 01.450</span>
+<div class='scenario node' test-id='67' status='pass'>
+
+	<span class='duration right label'>00 00 09.135</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login into Sauce Demo with invalid credentials</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validar reset App State sin refresh en carrito</div>
 	</div>
 	
 	
+		<div class='category-list'>
+				<span class='category label'>@resetCart</span>
+		</div>
 	
 	<ul class='steps'>
-		<li test-id='195' class='node given Pass' status='Pass'>
+		<li test-id='69' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.CommonSteps.goToSauceDemoPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</div>
 
 
 		</li>
-		<li test-id='196' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "invalid_user"</div>
+		<li test-id='70' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setUserName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I set the user name text box with "standard_user"</div>
 
 
 		</li>
-		<li test-id='197' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "invalid_password"</div>
+		<li test-id='71' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.setPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</div>
 
 
 		</li>
-		<li test-id='198' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</div>
+		<li test-id='72' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.LoginSteps.clickOnLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on the login button</div>
 
 
 		</li>
-		<li test-id='199' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.LoginSteps.verifyErrorMessageIsDisplayed(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A error message that says "Epic sadface: Username and password do not match any user in this service" should be displayed</div>
+		<li test-id='73' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.verifyHomePageIsDisplayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</div>
 
 
 		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='201' status='pass'>
-
-	<span class='duration right label'>00 00 02.917</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Login into Sauce Demo with valid credentials</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>user</td><td>password</td></tr><tr><td>standard_user</td><td>secret_sauce</td></tr><tr><td>visual_user</td><td>secret_sauce</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='202' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login into Sauce Demo with valid credentials</div>
+		<li test-id='74' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.addFollowingProducts(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I add following products to cart</div>
 
 
-			<ul class='gc steps'>
-				<li test-id='204' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='205' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='206' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='207' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</h6>
-
-				</li>
-				<li test-id='208' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</h6>
-
-				</li>
-			</ul>
+					<div class="node-step"><table class='markup-table table '><tr><td>Sauce Labs Backpack</td></tr><tr><td>Sauce Labs Bike Light</td></tr></table></div>
 		</li>
-		<li test-id='210' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login into Sauce Demo with valid credentials</div>
+		<li test-id='75' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBe(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be "2"</div>
 
 
-			<ul class='gc steps'>
-				<li test-id='212' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='213' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "visual_user"</h6>
-
-				</li>
-				<li test-id='214' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='215' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</h6>
-
-				</li>
-				<li test-id='216' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.HomeSteps.verifyHomePageIsDisplayed()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The home pages should be displayed</h6>
-
-				</li>
-			</ul>
 		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='218' status='pass'>
+		<li test-id='76' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.HomeSteps.clickOnCartIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the cart icon</div>
 
-	<span class='duration right label'>00 00 04.331</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Login into Sauce Demo with invalid credentials</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>user</td><td>password</td></tr><tr><td>standard_user</td><td>wrong_password</td></tr><tr><td>invalid_user</td><td>secret_sauce</td></tr><tr><td>invalid_user</td><td>invalid_password</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='219' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login into Sauce Demo with invalid credentials</div>
 
-				<div class='category-list'>
-						<span class='category label'>@run</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='221' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='222' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "standard_user"</h6>
-
-				</li>
-				<li test-id='223' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "wrong_password"</h6>
-
-				</li>
-				<li test-id='224' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</h6>
-
-				</li>
-				<li test-id='225' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.verifyErrorMessageIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A error message that says "Epic sadface: Username and password do not match any user in this service" should be displayed</h6>
-
-				</li>
-			</ul>
 		</li>
-		<li test-id='227' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login into Sauce Demo with invalid credentials</div>
+		<li test-id='77' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.yourCartShouldHaveItems(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then YourCart should have 2 items</div>
 
-				<div class='category-list'>
-						<span class='category label'>@run</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='229' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
-
-				</li>
-				<li test-id='230' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "invalid_user"</h6>
-
-				</li>
-				<li test-id='231' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "secret_sauce"</h6>
-
-				</li>
-				<li test-id='232' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</h6>
-
-				</li>
-				<li test-id='233' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.verifyErrorMessageIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A error message that says "Epic sadface: Username and password do not match any user in this service" should be displayed</h6>
-
-				</li>
-			</ul>
 		</li>
-		<li test-id='235' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Login into Sauce Demo with invalid credentials</div>
+		<li test-id='78' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.doResetFromCart())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I do reset app state from cart</div>
 
-				<div class='category-list'>
-						<span class='category label'>@run</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='237' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.CommonSteps.goToSauceDemoPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am in sauce demo web page</h6>
+		</li>
+		<li test-id='79' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartBadgeShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart badge should be empty</div>
 
-				</li>
-				<li test-id='238' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setUserName(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I set the user name text box with "invalid_user"</h6>
 
-				</li>
-				<li test-id='239' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.setPassword(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I set the password text box with "invalid_password"</h6>
+		</li>
+		<li test-id='80' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartShouldStillHaveItemsWithoutRefresh(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And cart should still have 2 items without refresh</div>
 
-				</li>
-				<li test-id='240' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.clickOnLoginButton()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on the login button</h6>
 
-				</li>
-				<li test-id='241' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.verifyErrorMessageIsDisplayed(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A error message that says "Epic sadface: Username and password do not match any user in this service" should be displayed</h6>
+		</li>
+		<li test-id='81' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.refreshPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I refresh page</div>
 
-				</li>
-			</ul>
+
+		</li>
+		<li test-id='82' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.BugsSteps.cartShouldBeEmpty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then cart should be empty</div>
+
+
 		</li>
 	</ul>
 </div>
@@ -1363,115 +696,6 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@resetCart</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 12, 2026 12:07:45 AM</td>
-										<td class='linked' test-id='16'>Validar reset App State sin refresh en carrito</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@resetBoton</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 12, 2026 12:07:54 AM</td>
-										<td class='linked' test-id='33'>Validar estado botones tras reset App State</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@run</span>
-						<span class='category-status right'>
-						<span class='label pass'>3</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 12, 2026 12:08:59 AM</td>
-										<td class='linked' test-id='219'>Login into Sauce Demo with invalid credentials</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Sep 12, 2026 12:09:01 AM</td>
-										<td class='linked' test-id='227'>Login into Sauce Demo with invalid credentials</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Sep 12, 2026 12:09:02 AM</td>
-										<td class='linked' test-id='235'>Login into Sauce Demo with invalid credentials</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
 						<span class='category-name'>@checkoutVacio</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
@@ -1494,8 +718,8 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 12, 2026 12:07:40 AM</td>
-										<td class='linked' test-id='2'>Checkout sin productos en carrito</td>
+										<td>Sep 15, 2026 08:02:37 PM</td>
+										<td class='linked' test-id='19'>Checkout sin productos en carrito</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -1505,7 +729,7 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@logoutBack</span>
+						<span class='category-name'>@resetCart</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -1527,8 +751,8 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 12, 2026 12:08:07 AM</td>
-										<td class='linked' test-id='51'>Validar logout y 3 backs con Epic sadface</td>
+										<td>Sep 15, 2026 08:03:04 PM</td>
+										<td class='linked' test-id='67'>Validar reset App State sin refresh en carrito</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -1560,8 +784,74 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 12, 2026 12:08:17 AM</td>
-										<td class='linked' test-id='65'>Checkout con datos aleatorios sin limite y sin validacion postal</td>
+										<td>Sep 15, 2026 08:02:30 PM</td>
+										<td class='linked' test-id='3'>Checkout con datos aleatorios sin limite y sin validacion postal</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@resetBoton</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 15, 2026 08:02:52 PM</td>
+										<td class='linked' test-id='48'>Validar estado botones tras reset App State</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@logoutBack</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 15, 2026 08:02:41 PM</td>
+										<td class='linked' test-id='34'>Validar logout y 3 backs con Epic sadface</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -1578,88 +868,7 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 12, 2026 12:08:33 AM</td>
-										<td class='linked' test-id='95'>Then A message that says "Thank you for your order!" should be displayed</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".complete\-header"}
-  (Session info: chrome=153.0.8010.37)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.47.0', revision: '9175ed9 9175ed94d83e87cc3abeb7c9fd91367d17849d35'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d019dcf2e209ffd7983b5f81e1b8a476, findElement {using=class name, value=complete-header}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.37, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\carlo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55628}, goog:processID: 42984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55628/devtoo..., se:cdpVersion: 153.0.8010.37, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d019dcf2e209ffd7983b5f81e1b8a476
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.getText(Unknown Source)
-	at pages.CheckoutCompletePage.getCheckoutCompleteMessage(CheckoutCompletePage.java:20)
-	at stepDefinitions.CheckoutCompleteSteps.verifyCheckoutCompleteMessage(CheckoutCompleteSteps.java:48)
-	at ✽.A message that says "Thank you for your order!" should be displayed(file:///D:/Universidad/8vo_Semestre/Certificacion%202/Segundo%20Parcial/Parcial/Selenium/saucedemo-finver/src/test/resources/checkout.feature:18)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -1667,37 +876,37 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>21</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>171</div>
+					<div class='panel-lead'>62</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 12, 2026 12:07:39 AM</div>
+					<div class='panel-lead'>Sep 15, 2026 08:02:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 12, 2026 12:09:04 AM</div>
+			 		<div class='panel-lead'>Sep 15, 2026 08:03:13 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 01 24.415</div>
+					<div class='panel-lead'>00 00 43.265</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1713,7 +922,25 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 							<th>Passed %</th>
 						</tr>
 						<tr>
+							<td>@checkoutVacio</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
 							<td>@resetCart</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@checkoutDatos</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -1731,34 +958,7 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 							</td>
 						</tr>
 						<tr>
-							<td>@run</td>
-							<td>3</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@checkoutVacio</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
 							<td>@logoutBack</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@checkoutDatos</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -1777,24 +977,24 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 4,
-				passParent: 3,
-				failParent: 1,
+                parentCount: 5,
+				passParent: 5,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 21,
-				passChild: 20,
-				failChild: 1,
+				childCount: 5,
+				passChild: 5,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 171,
-				passGrandChild: 170,
-				failGrandChild: 1,
+				grandChildCount: 62,
+				passGrandChild: 62,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -1805,7 +1005,7 @@ Session ID: d019dcf2e209ffd7983b5f81e1b8a476
 		
 		<script>
 			var timeline = {
-			        "SauceDemo Bugs Automation":44.03,"Checkout a product":17.457,"Home Page tests":12.39,"Login Sauce Demo App":10.168
+			        "Checkout con datos aleatorios sin limite y sin validacion postal":6.723,"Checkout sin productos en carrito":4.245,"Validar logout y 3 backs con Epic sadface":10.373,"Validar estado botones tras reset App State":12.476,"Validar reset App State sin refresh en carrito":9.135
 			};
 		</script>
 		

@@ -100,18 +100,20 @@ public class BugsSteps {
     public void yourCartShouldHaveItems(int count) throws InterruptedException {
         for (int i = 0; i < 5; i++) {
             YourCartPage cart = new YourCartPage(DriverManager.getDriver().driver);
-            int c3 = DriverManager.getDriver().driver.findElements(By.className("cart_item")).size();
+            int c3 = cart.getCartItemsCount();
             System.out.println("Cart counts try " + i + ": c3=" + c3 + " expected=" + count + " url=" + DriverManager.getDriver().driver.getCurrentUrl());
             if (c3 == count) {
                 Assertions.assertEquals(count, c3);
+                Assertions.assertEquals(count, cart.getCartItems().size());
                 return;
             }
             Thread.sleep(500);
         }
         YourCartPage cart = new YourCartPage(DriverManager.getDriver().driver);
-        int c3 = DriverManager.getDriver().driver.findElements(By.className("cart_item")).size();
-        System.out.println("Final cart count: " + c3 + " expected " + count + " pageSource: " + DriverManager.getDriver().driver.getPageSource().substring(0, Math.min(3000, DriverManager.getDriver().driver.getPageSource().length())));
+        int c3 = cart.getCartItemsCount();
+        System.out.println("Final cart count: " + c3 + " expected " + count);
         Assertions.assertEquals(count, c3);
+        Assertions.assertEquals(count, cart.getCartItems().size());
     }
 
     @When("I do reset app state from cart")
@@ -183,6 +185,17 @@ public class BugsSteps {
     @When("I remove product {string} from cart via home")
     public void removeProductViaHome(String product) throws InterruptedException {
         HomePage home = new HomePage(DriverManager.getDriver().driver);
+        try {
+            home.removeProductToCart(product);
+            Thread.sleep(800);
+            String badge = home.getCartBadgeText();
+            if (badge.equals("1") || badge.equals("0")) {
+                Thread.sleep(500);
+                return;
+            }
+        } catch (Exception e) {
+            Thread.sleep(400);
+        }
         By removeBtn = By.id("remove-" + product.toLowerCase().replace(" ", "-"));
         for (int i = 0; i < 3; i++) {
             try {
@@ -277,45 +290,6 @@ public class BugsSteps {
         System.out.println("Filling form with " + firstName.substring(0, Math.min(10, firstName.length())) + "...");
         checkout.fillCheckoutForm(firstName, lastName, postal);
         Thread.sleep(400);
-    }
-
-    @When("I fill checkout form with following data")
-    public void fillCheckoutFormWithDataTable(DataTable table) throws InterruptedException {
-        List<java.util.Map<String, String>> rows = table.asMaps(String.class, String.class);
-        String firstName = rows.get(0).get("firstName");
-        String lastName = rows.get(0).get("lastName");
-        String postal = rows.get(0).get("postal");
-        System.out.println("Filling form via DataTable, current url: " + DriverManager.getDriver().driver.getCurrentUrl());
-        for (int i = 0; i < 10; i++) {
-            if (!DriverManager.getDriver().driver.findElements(By.id("first-name")).isEmpty()) break;
-            Thread.sleep(500);
-        }
-        try {
-            WebElement fn = DriverManager.getDriver().driver.findElement(By.id("first-name"));
-            WebElement ln = DriverManager.getDriver().driver.findElement(By.id("last-name"));
-            WebElement pc = DriverManager.getDriver().driver.findElement(By.id("postal-code"));
-            System.out.println("Found form elements: fn displayed " + fn.isDisplayed() + " enabled " + fn.isEnabled() + " ln displayed " + ln.isDisplayed() + " pc displayed " + pc.isDisplayed());
-            System.out.println("FN outerHTML: " + fn.getAttribute("outerHTML").substring(0, Math.min(200, fn.getAttribute("outerHTML").length())));
-            ((JavascriptExecutor) DriverManager.getDriver().driver).executeScript("arguments[0].scrollIntoView(true);", fn);
-            Thread.sleep(300);
-            ((JavascriptExecutor) DriverManager.getDriver().driver).executeScript("arguments[0].value=arguments[1]; arguments[0].dispatchEvent(new Event('input', {bubbles:true})); arguments[0].dispatchEvent(new Event('change', {bubbles:true}));", fn, firstName);
-            ((JavascriptExecutor) DriverManager.getDriver().driver).executeScript("arguments[0].value=arguments[1]; arguments[0].dispatchEvent(new Event('input', {bubbles:true})); arguments[0].dispatchEvent(new Event('change', {bubbles:true}));", ln, lastName);
-            ((JavascriptExecutor) DriverManager.getDriver().driver).executeScript("arguments[0].value=arguments[1]; arguments[0].dispatchEvent(new Event('input', {bubbles:true})); arguments[0].dispatchEvent(new Event('change', {bubbles:true}));", pc, postal);
-            Thread.sleep(300);
-            String checkFn = (String) ((JavascriptExecutor) DriverManager.getDriver().driver).executeScript("return arguments[0].value;", fn);
-            String checkPc = (String) ((JavascriptExecutor) DriverManager.getDriver().driver).executeScript("return arguments[0].value;", pc);
-            System.out.println("JS check after fill: fn='" + checkFn.substring(0, Math.min(10, checkFn.length())) + "' pc='" + checkPc + "'");
-            System.out.println("Direct fill done via JS");
-        } catch (Exception e) {
-            System.out.println("Direct fill failed: " + e.getMessage());
-            e.printStackTrace();
-        }
-        Thread.sleep(600);
-        String actualFirst = "";
-        String actualPostal = "";
-        try { actualFirst = DriverManager.getDriver().driver.findElement(By.id("first-name")).getAttribute("value"); } catch (Exception e) {}
-        try { actualPostal = DriverManager.getDriver().driver.findElement(By.id("postal-code")).getAttribute("value"); } catch (Exception e) {}
-        System.out.println("Filled via DataTable: firstName len " + firstName.length() + " postal " + postal + " actual firstName val len: " + actualFirst.length() + " postal val: '" + actualPostal + "'");
     }
 
     @Then("form should keep values without truncation and postal contains {string}")

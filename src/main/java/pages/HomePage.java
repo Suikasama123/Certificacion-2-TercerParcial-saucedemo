@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage {
@@ -16,9 +15,6 @@ public class HomePage {
 
     @FindBy(className = "shopping_cart_link")
     WebElement shoppingCartIcon;
-
-    @FindBy(className = "inventory_item_name")
-    List<WebElement> productNames;
 
     @FindBy(className = "shopping_cart_badge")
     List<WebElement> cartBadge;
@@ -82,10 +78,6 @@ public class HomePage {
         try { ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", logoutLink); } catch(Exception e) { logoutLink.click(); }
     }
 
-    public boolean isOnInventoryPage(){
-        return driver.getCurrentUrl().contains("inventory.html");
-    }
-
     public boolean homeTitleIsDisplayed(){
         return homeTitle.isDisplayed();
     }
@@ -98,18 +90,6 @@ public class HomePage {
     public void removeProductToCart(String productName){
         String removeFromCartButtonId = "remove-"+productName.replace(" ", "-").toLowerCase();
         driver.findElement(By.id(removeFromCartButtonId)).click();
-    }
-
-    public String getShoppingCartIconText(){
-        return shoppingCartIcon.getText();
-    }
-
-    public List<String> getProductNames(){
-        List<String> productNamesText = new ArrayList<>();
-        for(WebElement productName: productNames){
-            productNamesText.add(productName.getText());
-        }
-        return productNamesText;
     }
 
     public void clickOnCartIcon(){

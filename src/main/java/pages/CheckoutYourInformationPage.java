@@ -61,18 +61,6 @@ public class CheckoutYourInformationPage {
         zipCodeTextBox.sendKeys(postalCode);
     }
 
-    public void setFirstNameTextBox(String firstName){
-        firstNameTextBox.sendKeys(firstName);
-    }
-
-    public void setLastNameTextBox(String lastName){
-        lastNameTextBox.sendKeys(lastName);
-    }
-
-    public void setZipCodeTextBox(String zipCode){
-        zipCodeTextBox.sendKeys(zipCode);
-    }
-
     public void clickOnContinueButton(){
         continueButton.click();
     }
